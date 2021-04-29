@@ -1,0 +1,12 @@
+{
+  "name": "neatcoin-genesis",
+  "version": "0.1.0",
+  "description": "Genesis balance information for Neatcoin.",
+  "main": "index.js",
+  "repository": "https://github.com/neatcoin/eons",
+  "author": "Wei Tang <wei@that.world>",
+  "license": "GPL-3.0-or-later",
+  "dependencies": {
+    "@polkadot/api": "^4.7.2"
+  }
+}
