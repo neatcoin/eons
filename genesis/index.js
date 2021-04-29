@@ -24,7 +24,7 @@ const main = async () => {
   
       const targetBalance = diffBlock.mul(balance).div(new BN(524160));
   
-      neatAddresses[address] = targetBalance;
+      neatAddresses[address] = targetBalance.toString(10);
     }
   
     const output = {
