@@ -1,6 +1,8 @@
 const { ApiPromise, WsProvider } = require('@polkadot/api');
 const BN = require('bn.js');
 
+const printPretty = process.env.PRINT_PRETTY === "1";
+
 const main = async () => {
     const wsProvider = new WsProvider('wss://rpc.kulupu.corepaper.org/ws');
     const api = await ApiPromise.create({
@@ -32,7 +34,11 @@ const main = async () => {
       info: info,
     };
   
-    console.log(JSON.stringify(output));
+    if (printPretty) {
+      console.log(JSON.stringify(neatAddresses, null, 4));
+    } else {
+      console.log(JSON.stringify(output));
+    }
   
     process.exit();
   };
